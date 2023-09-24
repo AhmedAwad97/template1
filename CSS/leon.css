@@ -18,10 +18,10 @@ body {
 }
 
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /* Small screen */
@@ -42,3 +42,95 @@ body {
     width: 117rem;
   }
 }
+
+/*Start Header */
+.header {
+  padding: 2rem;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 6rem;
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links .icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 3 rem;
+  width: 30px;
+}
+
+.header .links .icon span {
+  background-color: #333;
+  height: 2px;
+  margin-bottom: 5px;
+}
+
+.header .links .icon span:first-child {
+  width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+  transition: 0.3s;
+  width: 60%;
+}
+
+.header .links .icon span:nth-child(3) {
+  width: 100%;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+.header .links ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  min-width: 200px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 1.5rem);
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+.header .links ul::before {
+  content: "";
+  border: 10px solid;
+  border-color: transparent transparent #f3f3f3 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+.header .links ul a {
+  color: #333;
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header .links ul a:hover {
+  color: #5c5a5a;
+  padding-left: 2.5px;
+}
+
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End Header */
