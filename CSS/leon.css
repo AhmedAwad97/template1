@@ -1,5 +1,6 @@
 :root {
   --main-color: #10cab7;
+  --secondary-color: #2c4755;
 }
 
 *,
@@ -16,6 +17,7 @@ html {
 
 body {
   font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
 }
 
 .container {
@@ -43,6 +45,33 @@ body {
     width: 117rem;
   }
 }
+
+/*Start Components*/
+.special-heading {
+  color: #ebeced;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special-heading + p {
+  margin: -3rem 0 0;
+  font-size: 2rem;
+  text-align: center;
+  color: #797979;
+}
+
+@media screen and (max-width: 767px) {
+  .special-heading {
+    font-size: 6rem;
+  }
+  .special-heading + p {
+    margin-top: -2rem;
+  }
+}
+/*End Components*/
 
 /*Start Header */
 .header {
@@ -174,7 +203,7 @@ body {
   padding-top: 6rem;
 }
 
-.container {
+.features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
@@ -190,7 +219,6 @@ body {
   font-size: 4rem;
 }
 .features .feat h3 {
-  font-size: 2.4rem;
   font-weight: 800;
   margin: 30px 0;
 }
@@ -199,11 +227,78 @@ body {
   font-size: 1.7rem;
   line-height: 1.8;
 }
-/*
-@media screen and (min-width: 768px) {
-  .grid-1x3 {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-  }
-}*/
 /*End Features Section */
+
+/*Start Services*/
+.services {
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+}
+
+.services .services-content {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 4rem;
+}
+
+.services .services-content .service {
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.services .services-content .service i {
+  color: var(--main-color);
+  flex-basis: 6rem;
+}
+
+.services .services-content .service .text {
+  flex: 1;
+}
+
+.services .services-content .service .text h3 {
+  margin: 0 0 20px;
+}
+
+.services .services-content .service .text p {
+  color: #777;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.services .services-content .image {
+  position: relative;
+  text-align: center;
+}
+
+.services .services-content .image img {
+  width: 260px;
+  height: 35rem;
+}
+
+.services .services-content .image::before {
+  content: "";
+  background-color: var(--secondary-color);
+  height: calc(100% + 5rem);
+  position: absolute;
+  right: 0;
+  top: -2.5rem;
+  width: 10rem;
+  z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  .services .services-content .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .image-service {
+    display: none;
+  }
+}
+/*End Services*/
