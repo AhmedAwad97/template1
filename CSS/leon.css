@@ -3,6 +3,7 @@
   --secondary-color: #2c4755;
   --section-padding: 6rem;
   --section-background: #f6f6f6;
+  --section-margin-top: 4rem;
 }
 
 *,
@@ -242,7 +243,7 @@ body {
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-top: 4rem;
+  margin-top: var(--section-margin-top);
 }
 
 .services .services-content .service {
@@ -317,7 +318,7 @@ body {
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-top: 4rem;
+  margin-top: var(--section-margin-top);
 }
 
 .portfolio .portfolio-content .card {
@@ -357,3 +358,91 @@ body {
   }
 }
 /*End Portfolio*/
+
+/*Start About*/
+.about {
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--section-margin-top);
+}
+
+@media screen and (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.about .about-image {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  .about .about-image {
+    margin: 0 auto 6rem;
+  }
+}
+
+.about .about-image img {
+  max-width: 100%;
+}
+
+.about .about-image::before {
+  content: "";
+  position: absolute;
+  background: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.about .about-image::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 280px;
+  z-index: -1;
+  border-left: 60px solid var(--main-color);
+  border-bottom: 60px solid var(--main-color);
+  right: -86px;
+  top: -23px;
+}
+
+@media screen and (max-width: 991px) {
+  .about .about-image::before,
+  .about .about-image::after {
+    display: none;
+  }
+}
+
+.about .about-content .about-text {
+  flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .about-text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 5rem;
+}
+
+.about .about-content .about-text hr {
+  width: 50%;
+  display: inline-block;
+  border-color: var(--main-color);
+}
+
+.about .about-content .about-text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+/*End About*/
