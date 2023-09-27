@@ -495,3 +495,18 @@ body {
   }
 }
 /*End Contact*/
+
+/*Start Footer*/
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1.8rem;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.footer span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+/*End Footer*/
