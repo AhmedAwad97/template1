@@ -178,8 +178,7 @@ body {
 
 /* Start Landing Section */
 .landing {
-  background-image: url(../imgs/landing.webp);
-  clip-path: polygon(0 0, 100% 0%, 100% 82%, 0% 100%);
+  background-image: url(../imgs/mountain.webp);
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
