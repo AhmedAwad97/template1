@@ -107,7 +107,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 3rem;
-  width: 30px;
+  cursor: pointer;
 }
 
 .header .links .icon span {
@@ -145,7 +145,7 @@ body {
   z-index: 1; /* to make it appear above the landing element */
 }
 
-.header .links:hover ul {
+.header .links ul.visible {
   display: block;
 }
 
